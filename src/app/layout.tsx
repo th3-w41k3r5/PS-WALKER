@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className="font-sans antialiased overflow-x-hidden">
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

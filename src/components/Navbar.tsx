@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { GooeyText } from "@/components/ui/gooey-text-morphing";
 
@@ -42,9 +43,11 @@ export default function Navbar() {
           href="#hero"
           className="flex items-center gap-2.5 text-foreground hover:text-accent transition-colors duration-300"
         >
-          <img
+          <Image
             src={BRAND_LOGO}
             alt="Alan Walker logo"
+            width={160}
+            height={40}
             className="h-10 w-auto"
           />
           <GooeyText

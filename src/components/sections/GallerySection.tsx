@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useInView } from "@/hooks/useInView";
 
 const images = [
@@ -176,9 +177,11 @@ export default function GallerySection() {
                   scrollSnapAlign: "center",
                 }}
               >
-                <img
+                <Image
                   src={img.src}
                   alt={img.caption}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 520px"
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   style={{ opacity: 0.85 }}
                 />

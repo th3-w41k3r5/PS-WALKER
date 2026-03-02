@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const HERO_BG_URL = "https://res.cloudinary.com/dyfkvhvvk/image/upload/v1772009407/rs_w_2320_h_1787_foav6w.webp";
 const HERO_LOGO_URL = "https://res.cloudinary.com/dyfkvhvvk/image/upload/v1772009407/AW_WHITE_LOGO_ORIGINAL_zmfzqr.png";
@@ -47,9 +48,12 @@ export default function HeroSection() {
       id="hero"
     >
       <div className="absolute inset-0">
-        <img
+        <Image
           src={HERO_BG_URL}
           alt="EDM Miami concert atmosphere"
+          fill
+          sizes="100vw"
+          priority
           className="h-full w-full object-cover object-center"
           style={{ opacity: 0.28 }}
         />
@@ -71,11 +75,13 @@ export default function HeroSection() {
         </span>
       </div>*/}
       <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-4xl mx-auto pt-16">
-        <img
+        <Image
           src={HERO_LOGO_URL}
           alt="Alan Walker"
+          width={80}
+          height={80}
           className="mb-6 animate-fade-up"
-          style={{ width: "clamp(52px, 8vw, 80px)", opacity: 0.95 }}
+          style={{ width: "clamp(52px, 8vw, 80px)", height: "auto", opacity: 0.95 }}
         />
 
         <p
