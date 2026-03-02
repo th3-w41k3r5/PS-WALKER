@@ -36,8 +36,14 @@ export default function FooterSection() {
           })}
         </div>
 
-        <p className="text-muted-foreground text-xs font-body tracking-wider opacity-50">
+        <p className="text-muted-foreground text-[0.66rem] sm:text-xs font-body tracking-wider opacity-50">
           © 2026 PS WALKER. Not affiliated with EDM Awards Miami.
+        </p>
+      </div>
+
+      <div className="max-w-6xl mx-auto mt-7 pt-4 flex justify-center">
+        <p className="inline-flex items-center rounded-sm border border-accent/30 bg-accent/10 px-3 py-1.5 text-accent text-[0.66rem] sm:text-[0.68rem] font-medium-ui tracking-[0.1em] uppercase text-center">
+          Site built by PS WALKER #77992
         </p>
       </div>
     </footer>

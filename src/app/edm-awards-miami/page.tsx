@@ -11,8 +11,9 @@ import FinalCTASection from "@/components/sections/FinalCTASection";
 import FooterSection from "@/components/sections/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Vote Alan Walker | EDM Miami Awards 2026",
-  description: "Premium voting landing page for Walkers - EDM Miami Awards 2026.",
+  title: "Vote Alan Walker | EDM Awards Miami 2026",
+  description:
+    "Fan made Alan Walker EDM Awards Miami 2026 voting hub with all category voting links in one place.",
 };
 
 export default function EdmAwardsMiamiPage() {

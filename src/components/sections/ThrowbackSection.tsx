@@ -24,10 +24,10 @@ export default function ThrowbackSection() {
           </h2>
         </div>
 
-        <div className="px-6 md:px-12 lg:px-20">
+        <div className="px-6 md:px-12 lg:px-20 lg:max-w-5xl lg:mx-auto">
           <div
             className="relative overflow-hidden rounded-sm"
-            style={{ border: "1px solid hsl(var(--border))" }}
+            style={{ border: "1px solid hsl(var(--accent) / 0.24)" }}
           >
             <video
               controls

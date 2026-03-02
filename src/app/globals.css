@@ -281,6 +281,23 @@ body {
     50% { opacity: 0.4; }
   }
 
+  @keyframes comingSoonGlow {
+    0%, 100% {
+      text-shadow:
+        0 0 8px hsl(var(--accent) / 0.38),
+        0 0 18px hsl(var(--accent) / 0.28),
+        0 0 34px hsl(var(--accent) / 0.2);
+      filter: saturate(1.08) brightness(1.02);
+    }
+    50% {
+      text-shadow:
+        0 0 12px hsl(var(--accent) / 0.62),
+        0 0 28px hsl(var(--accent) / 0.45),
+        0 0 56px hsl(var(--accent) / 0.32);
+      filter: saturate(1.22) brightness(1.08);
+    }
+  }
+
   .colon-pulse {
     animation: countPulse 1s ease-in-out infinite;
   }

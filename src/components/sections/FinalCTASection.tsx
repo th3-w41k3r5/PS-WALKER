@@ -43,18 +43,18 @@ export default function FinalCTASection() {
         </h2>
 
           <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed tracking-[0.015em] mb-12 max-w-md mx-auto">
-          Every vote counts. Together, we can help Alan win all four EDM Miami Awards categories he is nominated for. So, vote now and share with fellow Walkers.
+          Every vote counts. Together, we can help Alan win all four EDM Awards Miami categories he is nominated for. So, vote now and share with fellow Walkers.
         </p>
 
         <a
           href="#categories"
           className="btn-solid-accent inline-flex items-center gap-3 px-12 py-5 rounded-sm text-sm md:text-base"
         >
-          <span>Vote for Alan Walker</span>
+          <span>Vote Now</span>
           <ExternalLink size={15} />
         </a>
 
-        <p className="text-muted-foreground text-xs font-body mt-6 tracking-widest uppercase opacity-60">
+        <p className="text-accent text-sm md:text-base font-medium-ui mt-7 tracking-[0.14em] uppercase motion-safe:animate-pulse">
           Voting closes March 28, 2026
         </p>
       </div>

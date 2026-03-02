@@ -64,7 +64,7 @@ function VoteModal({ cat, onClose }: { cat: Category; onClose: () => void }) {
       <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
 
       <div
-        className="relative w-full max-w-lg card-surface rounded-sm p-4.5 sm:p-8 md:p-10 max-h-[calc(100dvh-1rem)] sm:max-h-[90vh] overflow-hidden"
+        className="relative w-full max-w-lg card-surface rounded-sm p-5 sm:p-8 md:p-10 max-h-[calc(100dvh-1rem)] sm:max-h-[90vh] overflow-hidden"
         style={{ border: "1px solid hsl(var(--accent) / 0.2)" }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -75,7 +75,7 @@ function VoteModal({ cat, onClose }: { cat: Category; onClose: () => void }) {
           <X size={16} />
         </button>
 
-        <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-8 pr-9 sm:pr-8">
+        <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-8 pr-9 sm:pr-8">
           <div
             className="w-9 h-9 sm:w-12 sm:h-12 rounded-sm flex items-center justify-center flex-shrink-0"
             style={{ background: "hsl(var(--accent) / 0.08)", border: "1px solid hsl(var(--accent) / 0.2)" }}
@@ -88,10 +88,10 @@ function VoteModal({ cat, onClose }: { cat: Category; onClose: () => void }) {
           </div>
         </div>
 
-        <div className="divider-line mb-4 sm:mb-8" />
+        <div className="divider-line mb-5 sm:mb-8" />
 
-        <div className="space-y-3 sm:space-y-5 mb-4 sm:mb-8">
-          <div className="label-tag mb-2.5 sm:mb-4">How to Vote</div>
+        <div className="space-y-4 sm:space-y-5 mb-5 sm:mb-8">
+          <div className="label-tag mb-3 sm:mb-4">How to Vote</div>
           {[
             "Click the official voting button below to open the EDM Miami Awards portal.",
             "Submit your email address.",
@@ -99,20 +99,29 @@ function VoteModal({ cat, onClose }: { cat: Category; onClose: () => void }) {
             "Choose the nominee and click the Vote button.",
             "Confirm your vote through the email confirmation link.",
           ].map((step, i) => (
-            <div key={i} className="flex gap-3 sm:gap-4 items-start">
+            <div
+              key={i}
+              className="flex gap-3.5 sm:gap-4 items-start"
+            >
               <span
                 className="font-display text-accent flex-shrink-0 mt-0.5"
                 style={{ fontSize: "0.74rem", letterSpacing: "0.07em" }}
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="text-muted-foreground text-[0.88rem] sm:text-sm font-body leading-snug sm:leading-relaxed">{step}</p>
+              <p
+                className={`text-[0.88rem] sm:text-sm font-body leading-snug sm:leading-relaxed ${
+                  i === 4 ? "text-accent underline decoration-accent/70 underline-offset-3" : "text-muted-foreground"
+                }`}
+              >
+                {step}
+              </p>
             </div>
           ))}
         </div>
 
         <div
-          className="flex gap-3 rounded-sm p-3 sm:p-4 mb-4 sm:mb-8"
+          className="flex gap-3 rounded-sm p-3.5 sm:p-4 mb-5 sm:mb-8"
           style={{ background: "hsl(var(--accent) / 0.05)", border: "1px solid hsl(var(--accent) / 0.15)" }}
         >
           <AlertCircle size={14} className="text-accent flex-shrink-0 mt-0.5" />
@@ -125,7 +134,7 @@ function VoteModal({ cat, onClose }: { cat: Category; onClose: () => void }) {
           href={cat.voteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-solid-accent flex items-center justify-center gap-2.5 sm:gap-3 w-full py-3 sm:py-4 rounded-sm text-xs sm:text-sm"
+          className="btn-solid-accent flex items-center justify-center gap-2.5 sm:gap-3 w-full py-3.5 sm:py-4 rounded-sm text-xs sm:text-sm"
         >
           <span>Vote Now</span>
           <ExternalLink size={14} />
